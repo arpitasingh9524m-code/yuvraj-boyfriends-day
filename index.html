@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Yuvraj 💙</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070914;
+    color:white;
+    font-family:Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:
+    radial-gradient(circle at 15% 20%,#596cff35,transparent 30%),
+    radial-gradient(circle at 85% 75%,#b55cff30,transparent 30%);
+}
+
+section{
+    min-height:100vh;
+    padding:80px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.container{
+    width:100%;
+    max-width:1050px;
+}
+
+.small{
+    color:#9eaeff;
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:11px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-family:Georgia,serif;
+    font-size:clamp(75px,15vw,150px);
+    font-weight:400;
+    line-height:.8;
+    background:linear-gradient(100deg,#fff,#9caeff,#d29dff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero-text{
+    max-width:650px;
+    margin:35px auto;
+    color:#bfc3d8;
+    line-height:1.9;
+    font-size:17px;
+}
+
+button{
+    border:0;
+    border-radius:50px;
+    padding:15px 30px;
+    color:white;
+    background:linear-gradient(135deg,#6177ed,#985ee4);
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-4px);
+}
+
+.title{
+    font-family:Georgia,serif;
+    font-size:clamp(42px,7vw,70px);
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    color:#aeb3c8;
+    line-height:1.8;
+    max-width:700px;
+    margin:0 auto 45px;
+}
+
+.card{
+    max-width:850px;
+    margin:auto;
+    padding:42px;
+    background:#ffffff0d;
+    border:1px solid #ffffff1a;
+    border-radius:30px;
+    color:#d9dced;
+    line-height:2;
+    font-size:17px;
+}
+
+.card strong{
+    color:#aebaff;
+}
+
+
+/* PHOTOS */
+
+.photos{
+    margin-top:55px;
+}
+
+.photo-card{
+    max-width:950px;
+    margin:0 auto 75px;
+    padding:17px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+
+    background:#ffffff0d;
+    border:1px solid #ffffff1a;
+    border-radius:30px;
+
+    text-align:left;
+}
+
+.photo-card:nth-child(even) .photo{
+    order:2;
+}
+
+.photo{
+    overflow:hidden;
+    border-radius:22px;
+    aspect-ratio:4/5;
+    background:#111;
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.photo img:hover{
+    transform:scale(1.05);
+}
+
+.caption{
+    padding:25px;
+}
+
+.number{
+    color:#8d9cff;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.caption h3{
+    font-family:Georgia,serif;
+    font-size:38px;
+    font-weight:400;
+    margin:12px 0;
+}
+
+.caption p{
+    color:#aeb3c8;
+    line-height:1.8;
+}
+
+
+/* REASONS */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:45px;
+}
+
+.reason{
+    padding:28px;
+    background:#ffffff0d;
+    border:1px solid #ffffff14;
+    border-radius:22px;
+    text-align:left;
+    transition:.3s;
+}
+
+.reason:hover{
+    transform:translateY(-7px);
+}
+
+.icon{
+    font-size:34px;
+}
+
+.reason h3{
+    margin:12px 0 8px;
+}
+
+.reason p{
+    color:#aeb3c8;
+    line-height:1.7;
+    font-size:14px;
+}
+
+
+/* QUESTION */
+
+.question-box{
+    max-width:700px;
+    margin:auto;
+    padding:45px;
+    background:#ffffff0d;
+    border:1px solid #ffffff1a;
+    border-radius:30px;
+}
+
+.question{
+    font-family:Georgia,serif;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.choice{
+    background:transparent;
+    border:1px solid #6579e5;
+}
+
+.choice:hover{
+    background:#6579e5;
+}
+
+#answer{
+    margin-top:25px;
+    color:#abbaff;
+}
+
+
+/* GIFT */
+
+.gift{
+    font-size:90px;
+    cursor:pointer;
+    display:inline-block;
+    transition:.4s;
+}
+
+.gift:hover{
+    transform:scale(1.12) rotate(5deg);
+}
+
+.secret{
+    display:none;
+    max-width:650px;
+    margin:25px auto 0;
+    color:#c5c9dc;
+    line-height:1.9;
+}
+
+.secret strong{
+    color:#abbaff;
+    font-size:25px;
+}
+
+
+/* FINAL */
+
+.final h2{
+    font-family:Georgia,serif;
+    font-size:clamp(50px,8vw,90px);
+    font-weight:400;
+    line-height:1;
+
+    background:linear-gradient(100deg,#fff,#a8b5ff,#d6a6ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.final p{
+    max-width:700px;
+    margin:30px auto;
+    color:#b8bdd0;
+    line-height:1.9;
+}
+
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    pointer-events:none;
+    z-index:50;
+    animation:floatUp 5s linear forwards;
+}
+
+@keyframes floatUp{
+
+    0%{
+        opacity:0;
+        transform:translateY(0);
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:translateY(-110vh) rotate(30deg);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    section{
+        padding:70px 15px;
+    }
+
+    .card{
+        padding:28px 20px;
+    }
+
+    .photo-card{
+        grid-template-columns:1fr;
+        margin-bottom:60px;
+    }
+
+    .photo-card:nth-child(even) .photo{
+        order:0;
+    }
+
+    .caption{
+        padding:10px 5px 25px;
+    }
+
+    .reasons{
+        grid-template-columns:1fr;
+    }
+
+    .question-box{
+        padding:30px 20px;
+    }
+
+    .question{
+        font-size:32px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- HERO -->
+
+<section>
+
+<div class="container">
+
+<div class="small">
+A little something for
+</div>
+
+<h1>
+Yuvraj.
+</h1>
+
+<p class="hero-text">
+
+Not a normal website.<br>
+Not a normal message.<br>
+Just a tiny digital world made especially for you.
+
+</p>
+
+<button onclick="startStory()">
+Open Your Surprise ✨
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- MESSAGE -->
+
+<section id="note">
+
+<div class="container">
+
+<div class="small">
+01 / A note for you
+</div>
+
+<h2 class="title">
+Some things are better written.
+</h2>
+
+<p class="subtitle">
+So here's a tiny corner of the internet that belongs to you.
+</p>
+
+<div class="card">
+
+If I had to explain what makes you special,
+I'd probably need a much longer website.
+
+<br><br>
+
+Somewhere between the conversations,
+the jokes, the random moments,
+the little arguments and everything in between...
+
+<br><br>
+
+you became someone I genuinely care about.
+
+<br><br>
+
+So today isn't just about saying
+<strong>Happy Boyfriend's Day.</strong>
+
+It's about celebrating the person behind the name —
+
+<strong>Yuvraj.</strong>
+
+<br><br>
+
+Your singing,
+your eyes,
+your way of looking at me,
+and all those little things that make you...
+
+<strong>you.</strong>
+
+<br><br>
+
+I'm really glad you're part of my story. 💙
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PHOTOS -->
+
+<section>
+
+<div class="container">
+
+<div class="small">
+02 / Our little archive
+</div>
+
+<h2 class="title">
+Four frames. One story.
+</h2>
+
+<p class="subtitle">
+No fancy words needed for these.
+The pictures already say enough.
+</p>
+
+
+<div class="photos">
+
+
+<div class="photo-card">
+
+<div class="photo">
+
+<img src="photo1.jpg" alt="Our memory">
+
+</div>
+
+<div class="caption">
+
+<div class="number">
+Memory 01
+</div>
+
+<h3>
+The happy one.
+</h3>
+
+<p>
+Some photos just feel like a memory
+you want to keep replaying.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="photo-card">
+
+<div class="photo">
+
+<img src="photo2.jpg" alt="Our memory">
+
+</div>
+
+<div class="caption">
+
+<div class="number">
+Memory 02
+</div>
+
+<h3>
+Just us.
+</h3>
+
+<p>
+Even an ordinary moment can become
+one of your favourite memories later.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="photo-card">
+
+<div class="photo">
+
+<img src="photo3.jpg" alt="Our memory">
+
+</div>
+
+<div class="caption">
+
+<div class="number">
+Memory 03
+</div>
+
+<h3>
+A little closer.
+</h3>
+
+<p>
+The kind of picture that doesn't need
+a huge caption.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="photo-card">
+
+<div class="photo">
+
+<img src="photo4.jpg" alt="Our memory">
+
+</div>
+
+<div class="caption">
+
+<div class="number">
+Memory 04
+</div>
+
+<h3>
+My favourite kind of frame.
+</h3>
+
+<p>
+Some moments deserve to be remembered
+exactly as they were.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- REASONS -->
+
+<section>
+
+<div class="container">
+
+<div class="small">
+03 / The Yuvraj list
+</div>
+
+<h2 class="title">
+Things I like about you.
+</h2>
+
+
+<div class="reasons">
+
+
+<div class="reason">
+<div class="icon">🎤</div>
+<h3>Your singing</h3>
+<p>
+Because yes, I notice it.
+And yes, I like hearing you sing.
+</p>
+</div>
+
+
+<div class="reason">
+<div class="icon">👀</div>
+<h3>Your eyes</h3>
+<p>
+There is something about the way
+you look at me that I can't explain.
+</p>
+</div>
+
+
+<div class="reason">
+<div class="icon">🫶</div>
+<h3>Your way</h3>
+<p>
+The little things you do without thinking
+can become someone's favourite things.
+</p>
+</div>
+
+
+<div class="reason">
+<div class="icon">😂</div>
+<h3>Your chaos</h3>
+<p>
+Because apparently a completely peaceful
+life was never the plan.
+</p>
+</div>
+
+
+<div class="reason">
+<div class="icon">🌙</div>
+<h3>Your presence</h3>
+<p>
+Some days simply feel better because
+you're part of them.
+</p>
+</div>
+
+
+<div class="reason">
+<div class="icon">💙</div>
+<h3>Just you</h3>
+<p>
+The simplest answer is also the biggest one:
+
+You're Yuvraj.
+</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- QUESTION -->
+
+<section>
+
+<div class="container">
+
+<div class="small">
+04 / Important question
+</div>
+
+<div class="question-box">
+
+<div class="question">
+Would you choose me again? 🥺
+</div>
+
+<div class="buttons">
+
+<button class="choice" onclick="yesAnswer()">
+Obviously. 💙
+</button>
+
+<button class="choice" onclick="yesAnswer()">
+Always. 🫶
+</button>
+
+</div>
+
+<div id="answer"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GIFT -->
+
+<section>
+
+<div class="container">
+
+<div class="small">
+05 / One last surprise
+</div>
+
+<h2 class="title">
+Open it yourself.
+</h2>
+
+<p class="subtitle">
+Because apparently even a website
+needs a little suspense.
+</p>
+
+<div class="question-box">
+
+<div class="gift" id="gift" onclick="openGift()">
+🎁
+</div>
+
+<div class="secret" id="secret">
+
+Okay, Yuvraj...
+
+<br><br>
+
+If this whole website could give you
+one thing, it would be a reminder that
+somewhere in this huge world,
+there is someone who is genuinely happy
+that you exist.
+
+<br><br>
+
+<strong>
+I love youuuu. 💙
+</strong>
+
+<br><br>
+
+— Your Kishmish 🫶
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FINAL -->
+
+<section>
+
+<div class="container final">
+
+<div class="small">
+The last page
+</div>
+
+<h2>
+Happy Boyfriend's Day,
+<br>
+Yuvraj. 💙
+</h2>
+
+<p>
+
+Four little frames can't hold every memory,
+and one webpage can't hold every feeling.
+
+But this is a tiny piece of our story —
+made especially for you.
+
+<br><br>
+
+I'm really glad these pages have you in them.
+
+<br><br>
+
+<strong>
+Happy Boyfriend's Day, Yuvraj.
+</strong>
+
+</p>
+
+<p style="font-size:12px;letter-spacing:3px">
+MADE WITH 💙 FOR YUVRAJ
+</p>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+function startStory(){
+
+    document
+    .getElementById("note")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+    createHearts();
+
+}
+
+
+function yesAnswer(){
+
+    document
+    .getElementById("answer")
+    .innerHTML =
+    "Correct answer. 😌💙<br><br>" +
+    "Okay, you may continue scrolling now. 🫶";
+
+    createHearts();
+
+}
+
+
+function openGift(){
+
+    document
+    .getElementById("gift")
+    .innerHTML="💙";
+
+    document
+    .getElementById("secret")
+    .style.display="block";
+
+    createHearts();
+
+}
+
+
+function createHearts(){
+
+    for(let i=0;i<15;i++){
+
+        setTimeout(function(){
+
+            const heart =
+            document.createElement("div");
+
+            heart.className="heart";
+
+            const emojis=[
+                "💙",
+                "🤍",
+                "✨",
+                "🫶"
+            ];
+
+            heart.innerHTML =
+            emojis[
+                Math.floor(
+                    Math.random()*emojis.length
+                )
+            ];
+
+            heart.style.left =
+            Math.random()*100+"%";
+
+            heart.style.fontSize =
+            (16+Math.random()*25)+"px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(function(){
+                heart.remove();
+            },5500);
+
+        },i*100);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
